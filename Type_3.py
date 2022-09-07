@@ -2,3 +2,17 @@
 # округлённую до трёх знаков после точки.
 # Пример:
 # Для n = 6 -> 14.072
+def func(x):
+    return (1+(1/x))**x
+
+
+list = []
+n = int(input('введите число: '))
+for i in range(1, n + 1):
+    list.append(func(i))
+print(list)
+res = round(sum(list), 3)
+print()
+print(f'для n = {n} -> {res}')
+
+
