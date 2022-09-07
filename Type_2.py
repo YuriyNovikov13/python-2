@@ -4,9 +4,9 @@
 print('введите число N: ')
 n = int(input())
 print(f'набор произведений чисел от 1 до {n}: ')
-product = 1
+factorial = 1
 i = 1
 while i <= n:
-    product = product*i
+    factorial = factorial*i
     i += 1
-    print(f'{product}')
+    print(f'{factorial}')
