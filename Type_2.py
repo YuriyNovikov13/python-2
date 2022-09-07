@@ -9,6 +9,5 @@ result=[]
 while i <= n:
     factorial = factorial*i
     result.append(factorial)
-    i += 1
-   
+    i += 1   
 print(f'{result}')
