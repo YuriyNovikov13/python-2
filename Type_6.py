@@ -4,16 +4,28 @@
 #    abababbaba  aba -> 3
 a = str(input('введите первую строку: '))
 a1 = list(a)
+aLen = len(a1)
 b = str(input('введите вторую строку: '))
 b1 = list(b)
-blen = len(b1)
+bLen = len(b1)
 sum = 0
-while len(a1) >= len(b1):
-    a2 = a1[-blen:]
+if len(a1) >= len(b1):
+    while len(a1) >= len(b1):
+        a2 = a1[-bLen:]
 
-    if a2 == b1:
-        sum += 1
-        a1.pop(-1)
-    else:
-        a1.pop(-1)
-print(f'количество вхождений второй строки в первую -> {sum}')
+        if a2 == b1:
+            sum += 1
+            a1.pop(-1)
+        else:
+            a1.pop(-1)
+else:
+    while len(b1) >= len(a1):
+        b2 = b1[-aLen:]
+
+        if b2 == a1:
+            sum += 1
+            b1.pop(-1)
+        else:
+            b1.pop(-1)
+
+print(f'количество вхождений одной строки в другую -> {sum}')
